@@ -118,3 +118,18 @@ function aparecerLimon(){
     limonY=0;
     actualizarPantalla();
 }
+
+function reiniciar(){
+    // Detener cualquier intervalo previo por seguridad
+    clearInterval(intervalo);
+    
+    // Setear variables iniciales
+    vidas = 3;
+    puntaje = 0;
+    velocidadCaida = 200;
+    
+    mostrarEnSpan("txtVidas", vidas);
+    mostrarEnSpan("txtPuntaje", puntaje);
+    
+    iniciar();
+}

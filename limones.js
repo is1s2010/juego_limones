@@ -16,7 +16,7 @@ let vidas=3;
 let velocidadCaida=100;
 
 function iniciar(){
-     setInterval(bajarLimon,velocidadCaida);
+    intervalo = setInterval(bajarLimon, velocidadCaida); 
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();

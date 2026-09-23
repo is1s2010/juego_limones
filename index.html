@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Caza Estrellas</title>
+  <meta charset="UTF-8">
+  <title>Atrapar Limones</title>
+  
+  <!-- Importando fuente lúdica para el diseño del juego -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="limones.css"/>
   <script src="utils.js"></script>
- 
 </head>
 <body onload="iniciar()">
   <div class="contenedor">
     <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
+    <p>Si del cielo te caen limones ..... ¡Atrápalos!</p>
     <h2>Autor: Isis Montenegro</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
+    
+    <!-- Panel movido arriba del canvas para mejor visibilidad (HUD) -->
     <div class="panel">
       <p>Puntaje: <span id="txtPuntaje">0</span></p>
       <p>Vidas: <span id="txtVidas">3</span></p>
     </div>
+
+    <canvas id="areaJuego" width="600" height="400"></canvas>
+    
     <div class="botones">
       <button onclick="moverIzquierda();">Izquierda</button>
       <button onclick="moverDerecha();">Derecha</button>
-      <button onclick="reiniciar();">Reiniciar</button>
+      <button onclick="reiniciar();" class="btn-rojo">Reiniciar</button>
     </div>
   </div>
   <script src="limones.js"></script>
-
 </body>
 </html>

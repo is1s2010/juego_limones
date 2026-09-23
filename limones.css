@@ -24,11 +24,33 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
+/* Nuevo contenedor flexbox para el título y la imagen */
+.titulo-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espacio entre la imagen y el texto */
+  margin-bottom: 5px;
+}
+
+/* Estilo para la imagen del limón */
+.icono-limon {
+  width: 60px; /* Tamaño controlado para que no sea muy grande */
+  height: auto;
+  /* Opcional: una pequeña animación para darle vida */
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
 h1 {
   color: #f1c40f; /* Amarillo limón */
   font-size: 3em;
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin: 0; /* Removido el margin para que el flexbox controle la posición */
   text-shadow: 3px 3px 0px #d4ac0d;
   letter-spacing: 1px;
 }
@@ -36,7 +58,7 @@ h1 {
 h2 {
   color: #7f8c8d;
   font-size: 1em;
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 

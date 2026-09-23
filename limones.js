@@ -92,18 +92,18 @@ function detectarAtrapado(){
 }
 
 function detectarPiso(){
-    if(limonY + ALTO_LIMON==canvas.height-ALTURA_SUELO ){
+    if(limonY + ALTO_LIMON == canvas.height - ALTURA_SUELO){
         aparecerLimon();
-        vidas=vidas-1;
-        mostrarEnSpan("txtVidas",vidas);
+        vidas = vidas - 1;
+        mostrarEnSpan("txtVidas", vidas);
 
-        if(vidas==0){
+        if(vidas == 0){
+            // Detiene la caída de los limones y el ciclo del juego
+            clearInterval(intervalo); 
             alert("Game Over");
-
         }
     }
 }
-
 function generarAleatorio(min,max){
     let random=Math.random(); //0-1
     let numero=random*(max-min); //0-max
